@@ -41,6 +41,7 @@ function get_url($scope,$http) {
       .success(function(data) {
           console.log(data.id);
           $scope.facebookID = data.id;
+          $scope.facebookFeed = 'http://www.facebook.com/feeds/page.php?format=rss20&id='+data.id;
       })
       .error(function(data, status) {
           console.log(status);
